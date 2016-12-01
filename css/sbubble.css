@@ -1,0 +1,73 @@
+*{
+	font-family:"calibri",sans-serif;
+}
+/* Speech bubble */
+#sbubble{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	background-color:#2174a5;
+	background:url("../images/bg.jpg");
+	background-position:20px;
+	color:#000000;
+	font-size:21px;
+	text-shadow:1px 1px #ffffff;
+	padding:10px;	
+	display:block;
+	position:relative;
+	height:150px;
+	width:300px;
+	margin:100px auto;
+	-webkit-box-shadow:0px 0px 30px #708ba6;
+	-moz-box-shadow:0px 0px 30px #708ba6;
+	box-shadow:0px 0px 30px #708ba6;
+}
+#sbubble:before{
+	content:" ";
+	width:0px;
+	height:0px;
+	border-top:20px solid transparent;
+	border-right:35px solid #2174a5;
+	border-bottom:20px solid transparent;
+	border-left:25px solid transparent;	
+	display:inline-block;
+	position:absolute;
+	top:20px;
+	left:-50px;
+}
+/* Bell ringing */
+#sbubble:hover em{	
+	-webkit-animation-name:bell;
+	-webkit-animation-duration:0.2s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-iteration-count:infinite;
+	animation-name:bell;
+	animation-duration:0.5s;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+}
+#sbubble em{
+	background:url("../images/heart-curvy-flat.png") no-repeat;
+	background-size:32px;
+	width:32px;
+	height:32px;
+	float:right;
+}
+@-webkit-keyframes bell{
+	/* Bell Ringing replace with bell.png*/
+	/*0%{transform:rotate(0deg);}
+	25%{transform:rotate(45deg);}
+	50%{transform:rotate(90deg);}
+	100%{transform:rotate(-45deg);}*/
+	/* Heart Pounding */
+	0%{transform:scale(1.5)}
+}
+@keyframes bell{
+	/* Bell Ringing replace with bell.png*/
+	/*0%{transform:rotate(0deg);}
+	25%{transform:rotate(45deg);}
+	50%{transform:rotate(90deg);}
+	100%{transform:rotate(-45deg);}*/
+	/* Heart Pounding */
+	0%{transform:scale(1.5)}
+}
